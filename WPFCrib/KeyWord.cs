@@ -196,7 +196,7 @@ namespace WPFCrib
                         DataBase.Con.Close();
                     }
                 }
-                for (uint j = 0; j < myListsR[i].Count; j++)
+                for (int j = 0; j < myListsR[i].Count; j++)
                 {
                     using (_cmd = new SQLiteCommand(_sqlCom.InsertSubCat, DataBase.Con))
                     {
@@ -252,7 +252,7 @@ namespace WPFCrib
                         DataBase.Con.Close();
                     }
                 }
-                for (uint j = 0; j < myListsE[i].Count; j++)
+                for (int j = 0; j < myListsE[i].Count; j++)
                 {
                     using (_cmd = new SQLiteCommand(_sqlCom.InsertSubCat, DataBase.Con))
                     {

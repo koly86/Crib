@@ -9,6 +9,7 @@ using System.Windows.Media;
 
 namespace WPFCrib
 {
+    //привет
 
    internal enum NameParam
     {

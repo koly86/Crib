@@ -1,0 +1,17 @@
+﻿<Window x:Class="WPFCrib.DataTableD"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCrib"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="DataTable" Height="300" Width="680.114">
+    <Grid>
+        <DataGrid x:Name="dataGrid"  HorizontalAlignment="Left" Margin="218,32,0,0" VerticalAlignment="Top" Height="227" Width="444"/>
+        <TreeView x:Name="treeView"  MouseDoubleClick="TreeView_OnMouseDoubleClick"  HorizontalAlignment="Left" Height="227" Margin="10,32,0,0" VerticalAlignment="Top" Width="178" >
+         
+        </TreeView>
+
+    </Grid>
+</Window>

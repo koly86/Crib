@@ -1,0 +1,82 @@
+﻿<Window x:Class="WPFCrib.KeyWrdShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCrib"
+        mc:Ignorable="d"
+        Title="KeyWrdShow" Height="430.443" Width="497.945" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,2,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="117*"/>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="107*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="93*"/>
+            <ColumnDefinition Width="146*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Margin="10,10,5,5" Grid.ColumnSpan="2">
+            <Grid Height="100" Width="750">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="30*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="BtnCat1"  Grid.Column="0"  Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block1" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat2" Grid.Column="1" Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block2" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat3" Grid.Column="2" Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block3" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat4" Grid.Column="3" Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block4" TextWrapping="WrapWithOverflow"  TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat5" Grid.Column="4" Margin="5,10,5,15" Click="BtnCat1_OnClick"  >
+                    <TextBlock x:Name="Block5" TextWrapping="WrapWithOverflow" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat6" Grid.Column="5" Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block6" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat7" Grid.Column="6" Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block7" TextWrapping="WrapWithOverflow" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat8" Grid.Column="7" Margin="5,10,5,15" Click="BtnCat1_OnClick" >
+                    <TextBlock x:Name="Block8" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat9" Grid.Column="8" Margin="5,10,5,15"  Click="BtnCat1_OnClick">
+                    <TextBlock x:Name="Block9" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat10" Grid.Column="9" Margin="5,10,5,15" Click="BtnCat1_OnClick">
+                    <TextBlock x:Name="Block10" TextWrapping="WrapWithOverflow" TextAlignment="Center" />
+                </Button>
+                <Button x:Name="BtnCat11" Grid.Column="10" Margin="5,10,5,15" Click="BtnCat1_OnClick">
+                    <TextBlock x:Name="Block11" TextWrapping="Wrap" TextAlignment="Center" />
+                </Button>
+            </Grid>
+        </ListView>
+        <ListBox x:Name="ListSub"  Grid.Row="3" Grid.Column="0" Margin="10,2.286,5,5" MouseDoubleClick="ListSub_OnMouseDoubleClick"  />
+        <Border Grid.Row="3" Grid.Column="1" Margin="10,2.286,5,5" BorderThickness="1" BorderBrush="Gray" >
+            <TextBlock x:Name="TextBlockDescrip"  Margin="10,10,5,5" TextWrapping="Wrap" />
+        </Border>
+        <ListView Grid.Column="0" Margin="10,10,5,5" Grid.Row="1"  Grid.ColumnSpan="2" >
+            <Grid Name="Grid1" Height="100" Width="auto">
+            </Grid>
+        </ListView>
+        <Label x:Name="label" VerticalAlignment="Bottom" Content="KeyWords" Margin="10,7.285,67.877,0.469" Grid.Row="2" />
+        <Label x:Name="label1" Content="Description" VerticalAlignment="Bottom" Grid.Column="1" Margin="9.999,7.285,139.823,2.711" Grid.Row="2" />
+    </Grid>
+</Window>

@@ -1,0 +1,78 @@
+﻿<Window x:Class="WPFCrib.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCrib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="403.621" Width="633.217">
+    <Grid Margin="0,0,-8,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="78*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="47*"/>
+            <RowDefinition Height="270*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" IsMainMenu="True" Margin="10,10,10,2" Grid.ColumnSpan="2">
+            <MenuItem Header="Edit" Height="24" Width="73">
+                <MenuItem Header="Cut" Command="Cut" />
+                <MenuItem Header="_Copy" Command="Copy" />
+                <MenuItem Header="_Paste" Command="Paste" />
+            </MenuItem>
+        </Menu>
+        <GroupBox x:Name="groupBox" Header="Режим" HorizontalAlignment="Left" Height="97" Margin="148,3,0,0" Grid.Row="1" VerticalAlignment="Top" Width="138">
+            <StackPanel HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Width="126" Margin="0,0,-2,-2">
+                <RadioButton x:Name="rbWathing" Content="Просмотра" Margin="5" Checked="rbWathing_Checked" TabIndex="0"/>
+                <RadioButton x:Name="rbRecord" Content="Записи" Margin="5" IsChecked="True" TabIndex="1" Checked="rbWathing_Checked"/>
+                <RadioButton x:Name="rbEditing" Content="Редактирования" Margin="5" TabIndex="2" Checked="rbWathing_Checked"/>
+            </StackPanel>
+        </GroupBox>
+        <StatusBar HorizontalAlignment="Left" Height="30" Width="606" Margin="10,14,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <StatusBarItem Width="auto" HorizontalAlignment="Left"/>
+            <Label x:Name="errorMSG" Content="errorMSG" Height="30" Width="594" />
+        </StatusBar>
+        <ComboBox x:Name="cbbClassName" IsEditable="True" HorizontalAlignment="Left" Height="24" 
+                  Margin="10,105,0,0" Grid.Row="1" VerticalAlignment="Top" Width="276" SelectionChanged="cbbClassName_SelectionChanged">
+            <ComboBoxItem Content="ClassName" Name="ClassContName"/>
+        </ComboBox>
+        <TextBox x:Name="txtDescriptClass" 
+                 HorizontalAlignment="Left"                 
+                 Height="89" Margin="10,134,0,0" 
+                 Grid.Row="1" TextWrapping="Wrap" 
+                 Text="TextBox" 
+                 VerticalAlignment="Top" 
+                 Width="276" 
+                 Language="Russia"
+                 SpellCheck.IsEnabled="True"
+                 VerticalScrollBarVisibility="Auto"/>
+        <ComboBox x:Name="cbbPropertyName" 
+                  Grid.Column="1" 
+                  IsEditable="True"                
+                  HorizontalAlignment="Left" 
+                  Height="26" Margin="10,46,0,0" 
+                  Grid.Row="1" 
+                  VerticalAlignment="Top" 
+                  Width="116"
+                  SelectionChanged="cbbPropertyName_SelectionChanged"/>
+        <Label x:Name="label" 
+               Content="Название метода" 
+               Grid.Column="1" 
+               HorizontalAlignment="Left" 
+               Height="31" Margin="13,10,0,0" 
+               Grid.Row="1" VerticalAlignment="Top" 
+               Width="113"/>
+        <Label x:Name="label1" Content="Название класса" HorizontalAlignment="Left" Height="31" Margin="10,64,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="txtShourtDescriptProp" Grid.Column="1" HorizontalAlignment="Left" Height="85" 
+                 Margin="146,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="TextBox" 
+                 VerticalAlignment="Top" Width="168" VerticalScrollBarVisibility="Auto"/>
+        <TextBox x:Name="txtDescriptProperty" Grid.Column="1" HorizontalAlignment="Left" Height="118" Margin="10,105,0,0" Grid.Row="1" 
+                 TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="304" VerticalScrollBarVisibility="Auto"/>
+        <Button x:Name="btnSaveClass" Content="Сохранить класс" HorizontalAlignment="Left" Margin="10,240,0,0" Grid.Row="1" VerticalAlignment="Top" Width="175" Click="btnSave_Click"/>
+        <Button x:Name="btnClear" Content="Отмена" HorizontalAlignment="Left" Margin="203,240,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="bntClear_Click"/>
+        <Button x:Name="btnSaveProperty" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="128,240,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="btnSaveProperty_Click"/>
+        <Label x:Name="lblExcemple" Content="Пример" Grid.Column="1" HorizontalAlignment="Left" Margin="13,77,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
